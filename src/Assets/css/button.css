@@ -1,0 +1,23 @@
+.button {
+    padding: 10px ;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #0077b6; /* Sofistike bir mavi ton */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button:hover {
+    background-color: #333 !important;
+    color: #fff;
+    border-color: #f5f5f5;
+  }
+  
+  .button:active {
+    background-color: #555;
+    border-color: #333;
+  }

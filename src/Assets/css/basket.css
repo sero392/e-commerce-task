@@ -1,0 +1,92 @@
+.basket-buttons-main {
+    border: 1px solid #cbcbcb;
+    border-radius: 50px;
+    padding:3px 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.basket-buttons-main .button-basket {
+    padding: 0px 4px;
+    margin: 0px 5px;
+    font-size: 10pt;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background-color: #d8dae0;
+    color: rgb(14, 14, 14);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.product-bar {
+    display: flex;
+}
+
+.product-bar .search-bar {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.product-bar .search-bar input {
+    min-width: 70%;
+    min-height: 30px;
+    border: 1px solid;
+    border-radius: 3px;
+    border-color: #cbcbcb;
+    outline: none;
+}
+
+@media (max-width:576px) {
+    .special-order {
+        order: 2;
+    }
+}
+
+
+.basket-card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.basket-card .basket-card-title {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.basket-card .basket-card-body {
+    padding: 5px 10px;
+}
+
+.wallet-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0077b6;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.wallet-container .wallet-money {
+    top: -10;
+    right: 0;
+    padding: 1px 10px;
+    font-weight: bold;
+    background-color: #fff;
+    position: absolute;
+    height: 35px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+
+.card-body-basket{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
