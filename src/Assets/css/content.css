@@ -1,7 +1,5 @@
-
 .content-container .content-left .content-left-main img {
     width: 100%;
-    max-width: 1024px;
     height: 300px;
     aspect-ratio: 16 / 9;
     object-fit: cover;
@@ -14,11 +12,12 @@
     max-width: 1024px;
     object-fit: cover;
 }
-.content-container .content-left .content-sub .image-small{
-   height: 200px;
-   width: 100%;
-   max-width: 1024px;
-   object-fit: cover;
+
+.content-container .content-left .content-sub .image-small {
+    height: 200px;
+    width: 100%;
+    max-width: 1024px;
+    object-fit: cover;
 }
 
 
@@ -35,13 +34,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #333;
+    color: #fff;
+
 }
 
 .content-container .content-right .content-menu .content-menu-group .content-menu-header,
 .content-container .content-right .content-menu .content-menu-group .menu-item-group .menu-item {
     border: 1px solid #cbcbcb;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 1px;
 }
 
 .content-container .content-right .content-menu .content-menu-group .content-menu-header .content-menu-icon {
@@ -49,6 +51,7 @@
 }
 
 .content-container .content-right .content-menu .content-menu-group .menu-item-group {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid #cbcbcb;
     padding: 10px;
     border-radius: 5px;
@@ -59,4 +62,12 @@
 
 .content-container .content-right .content-menu .content-menu-group .menu-item-group .menu-item {
     width: 100%;
+    background-color: #fafafa;
+    color: #333;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.content-container .content-right .content-menu .content-menu-group .menu-item-group .menu-item:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }

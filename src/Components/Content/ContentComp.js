@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import '../../Assets/css/content.css';
-import burgerMenuIcon from '../../Assets/images/burger-menu.svg';
+import burgerMenuIcon from '../../Assets/images/icons/burger-menu.svg';
+import basketIcon from '../../Assets/images/icons/basket.svg';
 import ButtonComp from "../../Utils/ButtonComp";
 import MainBanner from "../../Assets/images/main-banner.png";
 import SubBanner1 from "../../Assets/images/sub-banner-1.png";
@@ -40,7 +41,7 @@ export default function ContentComp() {
                     </div>
                 </div>
                 <div className="content-sub row mt-2">
-                <div className="col-8 col-sm-12">
+                    <div className="col-8 col-sm-12">
                         <img className="img-fluid image-large" alt="main banner" src={SubBanner2} />
                     </div>
                     <div className="col-4 col-sm-12">
@@ -51,8 +52,18 @@ export default function ContentComp() {
             <div className="content-right col-4 col-sm-12 sm-order-1">
                 <div className="row">
                     <div className="col-12 ml-2">
-                        <ButtonComp onClick={() => window.navigateUrl('/Basket')}>
-                            Siparişler Sayfasına Git
+                        <ButtonComp onClick={() => window.navigateUrl('/Basket')}
+                            width="95%"
+                            borderRadius="0px">
+                            <div className="d-flex justify-space-between ">
+                                <div className="d-flex align-items-center ">
+                                    Siparişler Sayfasına Git
+                                </div>
+                                <div className="icon">
+                                    <img alt="basket" className="img-fluid" src={basketIcon} />
+                                </div>
+                            </div>
+
                         </ButtonComp>
                     </div>
                 </div>
@@ -62,7 +73,7 @@ export default function ContentComp() {
                             <div className="content-menu-title">
                                 Menu
                             </div>
-                            <div className="content-menu-icon">
+                            <div className="icon">
                                 <img className="img-fluid" alt="menu-icon" src={burgerMenuIcon} />
                             </div>
                         </div>
@@ -99,7 +110,7 @@ export default function ContentComp() {
                             </div>
                             <div className="menu-item mt-2">
                                 <div className="menu-item-title text-center" onClick={() => window.navigateUrl('/Products')}>
-                                Çekiliş Listesine Git
+                                    Çekiliş Listesine Git
 
                                 </div>
                             </div>

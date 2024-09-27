@@ -20,28 +20,41 @@
 
 .product-bar {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .product-bar .search-bar {
-    flex: 1;
-    margin-left: 10px;
+    margin-left: 30px;
+    flex: 0 0 70%;
+    max-width: 70%;
+    margin: auto;
+    margin-top: 10px;
 }
-
-.product-bar .search-bar input {
-    min-width: 70%;
-    min-height: 30px;
-    border: 1px solid;
-    border-radius: 3px;
-    border-color: #cbcbcb;
-    outline: none;
-}
-
-@media (max-width:576px) {
-    .special-order {
-        order: 2;
+@media (max-width:600px){
+    .product-bar .search-bar {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .product-bar .home-page-button {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .product-bar .search-bar .search-bar-input{
+        flex: 0 0 90% !important;
+        max-width: 90% !important;
     }
 }
-
+.product-bar .search-bar .search-bar-input{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.product-bar .search-bar .search-bar-input input {
+   width: 100%;
+    border: none;
+    border-bottom: 1px solid;
+    border-color: #333;
+    outline: none;
+}
 
 .basket-card {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

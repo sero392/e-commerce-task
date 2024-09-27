@@ -24,11 +24,11 @@
     background-color: #0077b6;
 }
 
-    .loading-container .loading {
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-    }
+.loading-container .loading {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
 
 
 .lds-hourglass {
@@ -38,18 +38,18 @@
     height: 80px;
 }
 
-    .lds-hourglass:after {
-        content: " ";
-        display: block;
-        border-radius: 50%;
-        width: 0;
-        height: 0;
-        margin: 8px;
-        box-sizing: border-box;
-        border: 32px solid #fff;
-        border-color: #fff transparent #fff transparent;
-        animation: lds-hourglass 1.2s infinite;
-    }
+.lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-hourglass 1.2s infinite;
+}
 
 @keyframes lds-hourglass {
     0% {
@@ -103,6 +103,7 @@
     min-width: 0;
     max-width: 100%;
 }
+
 .col-12 {
     flex: 0 0 100%;
     padding: 15px;
@@ -129,10 +130,11 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
-   
+
 }
-@media (max-width:576px){
-    .col-sm-12{
+
+@media (max-width:576px) {
+    .col-sm-12 {
         flex: 0 0 100%;
         max-width: 100%;
     }
@@ -140,10 +142,12 @@
     .sm-order-1 {
         order: 1;
     }
+
     .sm-order-2 {
         order: 2;
     }
 }
+
 @media (min-width: 768px) {
     .col {
         flex: 0 0 50%;
@@ -153,28 +157,37 @@
 
 @media (min-width: 992px) {
     .col {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media (min-width: 1025px) {
+    .col {
         flex: 0 0 25%;
         max-width: 25%;
     }
 }
- 
+
 /* Image Class*/
 .img-fluid {
     max-width: 100%;
     height: auto;
 }
-
+.icon{
+    max-width: 25px;
+}
 /* Text Class */
 .text-center {
     text-align: center;
 }
-.font-weight-bold{
+
+.font-weight-bold {
     font-weight: bold;
 }
 
 /* Width Class */
 .w-80 {
-    width: 80% !important;
+    width: 90% !important;
 }
 
 
@@ -199,9 +212,35 @@
     margin-top: 25px;
 }
 
-.ml-1{
+.ml-1 {
     margin-left: 5px;
 }
-.ml-2{
+
+.ml-2 {
     margin-left: 10px;
+}
+
+/* Padding Class */
+.pr-1 {
+    padding-right: 5px;
+}
+
+.pr-2 {
+    padding-right: 10px;
+}
+
+.pr-3 {
+    padding-right: 15px;
+}
+
+.pr-4 {
+    padding-right: 20px;
+}
+
+.pr-5 {
+    padding-right: 25px;
+}
+
+.pr-6 {
+    padding-right: 30px;
 }

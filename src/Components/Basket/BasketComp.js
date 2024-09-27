@@ -4,6 +4,8 @@ import { getData } from "../../Api/Api";
 import ButtonComp from "../../Utils/ButtonComp";
 import '../../Assets/css/basket.css';
 import ToastrComp from "../../Utils/ToastrComp";
+import searchIcon from '../../Assets/images/icons/search.svg';
+import home from '../../Assets/images/icons/home.svg';
 
 export default function BasketComp() {
     const [data, setData] = useState([]);
@@ -35,6 +37,13 @@ export default function BasketComp() {
         setSearchValue(searchValue);
     };
     const completeOrder = () => {
+        if (basket.length === 0) {
+            setToastrMessage({ message: 'Sepete ürün eklemediniz.', type: 'error' })
+            setTimeout(() => {
+                setToastrMessage(null);
+            }, 2000)
+            return;
+        }
         const totalArr = basket.map((m) => m.price * m.basketCount);
         const totalCost = totalArr.reduce((o, n) => {
             return o + n
@@ -113,13 +122,28 @@ export default function BasketComp() {
             }
 
             <div className="product-bar ml-2">
-                <ButtonComp onClick={() => window.navigateUrl('/')}>
-                    Ana Sayfa
+               <div className="home-page-button">
+               <ButtonComp onClick={() => window.navigateUrl('/')}
+                    borderRadius="1px">
+                    <img alt="Search"
+                        className="img-fluid"
+                        style={{ width: '12px' }}
+                        src={home} />
+                    <span className="ml-2">
+                        Ana Sayfa
+                    </span>
                 </ButtonComp>
-                <div className="search-bar">
-                    <input type="text"
-                        placeholder="Ara"
-                        onChange={(event) => filterSearch(event.target.value)} />
+               </div>
+                <div className="search-bar d-flex align-items-center">
+                    <div className="search-bar-input">
+                        <input type="text"
+                            placeholder="Ara"
+                            onChange={(event) => filterSearch(event.target.value)} />
+                    </div>
+
+                    <div className="icon">
+                        <img alt="Search" className="img-fluid" src={searchIcon} />
+                    </div>
                 </div>
             </div>
             <div className="product-list">
